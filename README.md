@@ -12,6 +12,12 @@
 - [HTML Lists](#HTML-Lists)
 - [HTML Tables](#HTML-Tables)
 - [HTML Forms](#HTML-Forms)
+- [HTML Block & Inline Level Elements](#Block-&-Inline-Level-Elements)
+- [HTML Grouping Tags](#HTML-Grouping-Tags)
+- [HTML The class Attribute](#HTML-The-class-Attribute)
+- [HTML The id Attribute](#HTML-The-id-Attribute)
+- [HTML Entities](#HTML-Entities)
+- [HTML Semantic Elements](#HTML-Semantic-Elements)
 
 ## What is HTML
 
@@ -230,3 +236,164 @@
   <option value="audi">Audi</option>
 </select>
 ```
+
+> The `<textarea>` Element
+
+```html
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+```
+
+> The `<button>` Element
+
+```html
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+```
+
+> The `<fieldset>` and `<legend>` Elements
+
+```html
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br />
+    <input type="text" id="fname" name="fname" value="John" /><br />
+    <label for="lname">Last name:</label><br />
+    <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+    <input type="submit" value="Submit" />
+  </fieldset>
+</form>
+```
+
+## Block & Inline Level Elements
+
+> Every HTML element has a default display value depending on what type of element it is.
+> <br>
+> The two display values are: block and inline.
+
+```
+Block level elements in HTML:
+
+<address> <article> <aside> <blockquote> <canvas>
+<dd> <div> <dl> <dt> <fieldset> <figcaption> <figure>
+<footer> <form> <h1>-<h6> <header> <hr> <li> <main>
+<nav> <noscript> <ol> <p> <pre> <section> <table>
+<tfoot> <ul> <video>
+```
+
+> Inline elements in HTML:
+
+```
+<a> <abbr> <acronym> <b> <bdo> <big> <br> <button> <cite> <code>
+<dfn> <em> <i> <img> <input> <kbd> <label> <map> <object> <output>
+<q> <samp> <script> <select> <small> <span> <strong> <sub> <sup>
+<textarea> <time> <tt> <var>
+```
+
+## HTML Grouping Tags
+
+| Tag      | Description                                   |
+| -------- | --------------------------------------------- |
+| `<div>`  | Defines a section in a document (block-level) |
+| `<span>` | Defines a section in a document (inline)      |
+
+## HTML The class Attribute
+
+> The HTML class attribute is used to define equal styles for elements with the same class name.
+> <br>
+> So, all HTML elements with the same class attribute will get the same style.
+> <br>
+> Here we have three `<div>` elements that point to the same class name:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .cities {
+        background-color: black;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cities">
+      <h2>London</h2>
+      <p>London is the capital of England.</p>
+    </div>
+
+    <div class="cities">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="cities">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+  </body>
+</html>
+```
+
+## HTML The id Attribute
+
+> The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).
+> <br>
+> The id value can be used by CSS and JavaScript to perform certain tasks for the element with the specific id value.
+> <br>
+> In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:
+
+```html
+<style>
+  #myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+  }
+</style>
+
+<h1 id="myHeader">My Header</h1>
+```
+
+## HTML Entities
+
+> Some characters are reserved in HTML.
+
+| Result | Description                        | Entity Name | Entity Number |
+| ------ | ---------------------------------- | ----------- | ------------- |
+|        | non-breaking space                 | `&nbsp;`    | `&#160;`      |
+| <      | less than                          | `&lt;`      | `&#60;`       |
+| >      | greater than                       | `&gt;`      | `&#62;`       |
+| &      | ampersand                          | `&amp;`     | `&#38;`       |
+| "      | double quotation mark              | `&quot;`    | `&#34;`       |
+| '      | single quotation mark (apostrophe) | `&apos;`    | `&#39;`       |
+| ¢      | cent                               | `&cent;`    | `&#162;`      |
+| £      | pound                              | `&pound;`   | `&#163;`      |
+| ¥      | yen                                | `&yen;`     | `&#165;`      |
+| €      | euro                               | `&euro;`    | `&#8364;`     |
+| ©      | copyright                          | `&copy;`    | `&#169;`      |
+| ®      | registered trademark               | `&reg;`     | `&#174;`      |
+
+## HTML Semantic Elements
+
+> Below is an alphabetical list of some of the semantic elements in HTML.
+
+| Tag            | Description                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------------- |
+| `<article>`    | Defines an article                                                                          |
+| `<aside>`      | Defines content aside from the page content                                                 |
+| `<details>`    | Defines additional details that the user can view or hide                                   |
+| `<figcaption>` | Defines a caption for a `<figure>` element                                                  |
+| `<figure>`     | Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. |
+| `<footer>`     | Defines a footer for a document or section                                                  |
+| `<header>`     | Specifies a header for a document or section                                                |
+| `<main>`       | Specifies the main content of a document                                                    |
+| `<mark>`       | Defines marked/highlighted text                                                             |
+| `<nav>`        | Defines navigation links                                                                    |
+| `<section>`    | Defines a section in a document                                                             |
+| `<summary>`    | Defines a visible heading for a `<details>` element                                         |
+| `<time>`       | Defines a date/time                                                                         |
