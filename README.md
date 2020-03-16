@@ -25,6 +25,8 @@
 - HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
 - Browsers do not display the HTML tags, but use them to render the content of the page
 
+> Example HTML Basic
+
 ```html
 <!DOCTYPE html>
 <html>
